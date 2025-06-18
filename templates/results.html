@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Query Results</h1>
+            <p>Here are the results for your query:</p>
+        </header>
+        <div class="results">
+            <p><strong>Query:</strong> {{ query }}</p>
+            <p><strong>Results:</strong></p>
+            <ul>
+                {% for result in results %}
+                <li>{{ result }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <a href="/" class="back-btn">Go Back</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload PDF</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Upload and Process Your PDF</h1>
+            <p>Use our AI-powered system to extract and analyze data from your PDF files.</p>
+        </header>
+        <form method="POST" enctype="multipart/form-data" class="upload-form">
+            <input type="file" name="file" accept="application/pdf" required>
+            <button class="primary-btn" type="submit">Upload and Process</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="messages">
+            <ul>
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+        {% endwith %}
+    </div>
+</body>
+</html>

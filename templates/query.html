@@ -1,0 +1,21 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Query Processed Data</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>Query the Processed Data</h1>
+                <p>Ask questions and get instant results from your uploaded document.</p>
+            </header>
+            <form method="POST" class="query-form">
+                <input type="text" name="query" placeholder="Enter your question here..." required style="width: 50%;">
+                <button class="primary-btn" type="submit">Submit Query</button>
+            </form>
+        </div>
+    </body>
+    </html>
